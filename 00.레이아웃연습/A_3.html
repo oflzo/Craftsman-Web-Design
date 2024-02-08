@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디 레이아웃연습 A-3</title>
+    <style type="text/css">
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        body{
+            background-color: #fff;
+            color: #333;
+        }
+
+        #wrap{
+            width: 100%;
+        }
+
+        /* header */
+        #header{
+            width: 1200px;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        .logo{
+            width: 200px;
+            height: 100px;
+            background-color: blueviolet;
+        }
+
+        .nav{
+            width: 1000px;
+            height: 100px;
+            background-color: yellow;
+        }
+
+
+        /* slide */
+        #slide{
+            width: 1200px;
+            height: 300px;
+            margin: 0 auto;
+            background-color: palegoldenrod;
+        }
+
+        /* contents */
+        #contents{
+            width: 1200px;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        .notice{
+            width: 33.3333%;
+            height: 200px;
+            background-color: mediumspringgreen;
+        }
+        .banner{
+            width: 33.3333%;
+            height: 200px;
+            background-color: mediumorchid;
+        }
+        .direct{
+            width: 33.3333%;
+            height: 200px;
+            background-color: mediumturquoise;
+        }
+
+        /* footer */
+        #footer{
+            width: 1200px;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        .f_logo{
+            flex: 2;
+            background-color: plum;
+            /* height: 100px; */
+        }
+        .f_right{
+            flex: 8;
+            /* flex-direction: column; */
+        }
+
+        .f_menu{
+            height: 50px;
+            border-bottom: 1px dotted red;
+            background-color: palegoldenrod;
+        }
+
+        .f_copy{
+            height: 50px;
+            background-color: powderblue;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <h1 class="logo"></h1>
+            <nav class="nav"></nav>
+        </header>
+        <!-- header -->
+
+        <section id="slide"></section>
+        <!-- slide -->
+
+        <section id="contents"> 
+            <article class="notice"></article>
+            <article class="banner"></article>
+            <article class="direct"></article>
+        </section>
+
+        <!-- contents -->
+
+        <footer id="footer">
+            <article class="f_logo"></article>
+            <article class="f_right">
+                <div class="f_menu"></div>
+                <div class="f_copy"></div>
+            </article>
+        </footer>
+        <!-- footer -->
+    </div>
+</body>
+</html>
