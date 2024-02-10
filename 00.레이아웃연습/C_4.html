@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디 레이아웃연습 C-4</title>
+    <style type="text/css">
+        *{margin: 0; padding: 0; box-sizing: border-box;}
+        #wrap{
+            width: 1000px;
+            display: flex;
+        }
+
+        #aside{
+            width: 20%;
+        }
+
+        .logo{
+            height: 100px;
+            background-color: pink;
+        }
+
+        .nav{
+            height: 550px;
+            background-color: aliceblue;
+        }
+
+        /* main */
+        #main{
+            width: 80%;
+        }
+
+        #slide{
+            height: 350px;
+            background-color: palegoldenrod;
+        }
+
+        #contents{
+            display: flex;
+        }
+        .notice{
+            width: 33.3333%;
+            height: 200px;
+            background-color: mediumpurple;
+        }
+        .gallery{
+            width: 33.3333%;
+            height: 200px;
+            background-color: mediumaquamarine;
+        }
+        .direct{
+            width: 33.3333%;
+            height: 200px;
+            background-color: mediumblue;
+        }
+
+        #footer{
+            display: flex;
+        }
+
+        .f_logo{
+            width: 20%;
+            height: 100px;
+            background-color: chartreuse;
+        }
+
+        .f_copy{
+            width: 60%;
+            height: 100px;
+            background-color: cornflowerblue;
+        }
+
+        .family{
+            width: 20%;
+            height: 100px;
+            background-color: crimson;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <aside id="aside">
+            <h1 class="logo"></h1>
+            <nav class="nav"></nav>
+        </aside>
+        <main id="main">
+            <article id="slide"></article>
+            <section id="contents">
+                <article class="notice"></article>
+                <article class="gallery"></article>
+                <article class="direct"></article>
+            </section>
+            <footer id="footer">
+                <div class="f_logo"></div>
+                <div class="f_copy"></div>
+                <div class="family"></div>
+            </footer>
+        </main>
+    </div>
+</body>
+</html>

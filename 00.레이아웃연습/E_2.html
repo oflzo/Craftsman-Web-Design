@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디 레이아웃연습 E-2</title>
+    <style type="text/css">
+        *{margin: 0; padding: 0; box-sizing: border-box;}
+
+        #wrap{
+            width: 100%;
+        }
+        /* main */
+        #main{
+            width: 100%;
+            height: calc(100vh - 100px);
+            display: flex;
+        }
+
+        /* header */
+        #header{
+            width: 200px;
+        }
+
+        .logo{
+            height: 10%;
+            background-color: chartreuse;
+        }
+
+        .nav{
+            height: 90%;
+            background-color: aliceblue;
+        }
+
+        /* content */
+        #content{
+            width: 400px;
+        }
+
+        .notice{
+            height: 42.5%;
+            background-color: lavender;
+        }
+
+        .gallery{
+            height: 42.5%;
+            background-color: pink;
+        }
+
+        .link{
+            height: 15%;
+            background-color: palegoldenrod;
+        }
+
+        /* slide */
+        #slide{
+            width: calc(100% - 600px);
+            background-color: lemonchiffon;
+        }
+
+        /* footer */
+        #footer{
+            width: 100%;
+            display: flex;
+        }
+
+        .f_logo{
+            width: 20%;
+            height: 100px;
+            background-color: lightgoldenrodyellow;
+        }
+
+        .f_notice{
+            width: 55%;
+            height: 100px;
+            background-color: mediumturquoise;
+        }
+
+        .f_family{
+            width: 25%;
+            height: 100px;
+            background-color: cyan;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <main id="main">
+            <header id="header">
+                <h1 class="logo"></h1>
+                <nav class="nav"></nav>
+            </header>
+            <!-- //header -->
+            <section id="content">
+                <article class="notice"></article>
+                <article class="gallery"></article>
+                <article class="link"></article>
+            </section>
+            <!-- //content -->
+            <article id="slide"></article>
+            <!-- //slide -->
+        </main>
+        <!-- //main -->
+
+        <footer id="footer">
+            <div class="f_logo"></div>
+            <div class="f_notice"></div>
+            <div class="f_family"></div>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+</html>

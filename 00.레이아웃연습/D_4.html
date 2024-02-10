@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디 레이아웃연습 D-4</title>
+    <style type="text/css">
+        *{margin: 0; padding: 0; box-sizing: border-box;}
+
+        #wrap{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /* aside */
+        #aside{
+            width: 200px;
+        }
+
+        .logo{
+            height: 100px;
+            background-color: aliceblue;
+        }
+
+        .nav{
+            height: 700px;
+            background-color: pink;
+        }
+
+        /* main */
+        #main{
+            width: calc(100% - 200px);
+        }
+
+        .slide{
+            height: 400px;
+            background-color: cornflowerblue;
+        }
+
+        .banner{
+            height: 150px;
+            background-color: yellow;
+        }
+
+        .notice{
+            height: 250px;
+            background-color: mediumspringgreen;
+        }
+
+        /* footer */
+        #footer{
+            width: 100%;
+            display: flex;
+        }
+
+        .f_blink{
+            width: 200px;
+            height: 100px;
+            background-color: coral;
+        }
+
+        .f_middle{
+            width: calc(100% - 200px - 250px);
+        }
+
+        .f_menu{
+            height: 50px;
+            background-color: slateblue;
+        }
+
+        .f_notice{
+            height: 50px;
+            background-color: lemonchiffon;
+        }
+
+        .family{
+            width: 250px;
+            height: 100px;
+            background-color: lightgreen;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <aside id="aside">
+            <h1 class="logo"></h1>
+            <nav class="nav"></nav>
+        </aside>
+        <!-- //aside -->
+
+        <main id="main">
+            <article class="slide">
+            </article>
+
+            <section class="contents">
+                <div class="banner"></div>
+                <div class="notice"></div>
+            </section>
+        </main>
+        <!-- //main -->
+
+        <footer id="footer">
+            <div class="f_blink"></div>
+            
+            <div class="f_middle">
+                <div class="f_menu"></div>
+                <div class="f_notice"></div>
+            </div>
+
+            <div class="family"></div>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+</html>
