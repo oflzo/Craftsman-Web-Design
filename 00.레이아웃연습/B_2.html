@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디 레이이웃연습 B-2</title>
+    <style type="text/css">
+        *{margin: 0; padding: 0; box-sizing: border-box;}
+
+        #wrap{
+            width: 100%;
+        }
+
+        /* header */
+        #header{
+            width: 100%;
+            background-color: #eee;
+        }
+
+        .head_inner{
+            width: 1200px;
+            display: flex;
+            margin: 0 auto;
+            background-color: seashell;
+        }
+
+        .logo{
+            width: 20%;
+            height: 100px;
+            background-color: lavender;
+        }  
+        
+        .nav{
+            width: 80%;
+            height: 100px;
+            background-color: plum;
+        }
+
+        /* main */
+        #main{
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .slide{
+            height: 300px;
+            background-color: #eee;
+        }
+
+        .contents{
+            display: flex;
+        }
+
+        .notice{
+            width: 33.3333%;
+            height: 200px;
+            background-color: mediumspringgreen;
+        }
+
+        .gallery{
+            width: 33.3333%;
+            height: 200px;
+            background-color: pink;
+        }
+
+        .direct{
+            width: 33.3333%;
+            height: 200px;
+            background-color: aliceblue;
+        }
+
+
+        /* footer */
+        #footer{
+            width: 100%;
+            background-color: #eee;
+        }
+
+        .f_inner{
+            width: 1200px;
+            display: flex;
+            margin: 0 auto;
+        }
+
+        .f_copy{
+            width: 80%;
+            background-color: palevioletred;
+        }
+
+        .f_right{
+            width: 20%;
+        }
+
+        .sns{
+            height: 50px;
+            background-color: palegreen;
+        }
+
+        .family{
+            height: 50px;
+            background-color: powderblue;
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="head_inner">
+                <h1 class="logo"></h1>
+                <nav class="nav"></nav>
+            </div>
+        </header>
+
+        <section id="main">
+            <article class="slide"></article>
+            <section class="contents">
+                <article class="notice"></article>
+                <article class="gallery"></article>
+                <article class="direct"></article>
+            </section>
+        </section>
+
+        <footer id="footer">
+            <div class="f_inner">
+                <div class="f_copy"></div>
+                <div class="f_right">
+                    <div class="sns"></div>
+                    <div class="family"></div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
