@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디 레이아웃연습 B-1</title>
+    <style type="text/css">
+        *{margin: 0; padding: 0; box-sizing: border-box;}
+
+        #wrap{width: 100%;}
+
+        /* header */
+        #header{
+            width: 100%;  
+            background-color: #eee;   
+        }
+
+        .head_inner{
+            width: 1200px;
+            display: flex;
+            margin: 0 auto;
+        }
+
+        .logo{
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+        }
+
+
+        .nav{
+            width: 1000px;
+            height: 100px;
+            background-color: paleturquoise;
+        }
+
+        /* slide */
+        #slide{
+            width: 1200px;
+            height: 300px;
+            margin: 0 auto;
+            background-color: palegreen;
+        }
+
+
+        /* contents */
+        #contents{
+            width: 1200px;
+            display: flex;
+            margin: 0 auto;
+        }
+
+        .notice{
+            width: 33.3333%;
+            height: 200px;
+            background-color: lavender;
+        }
+
+        .banner{
+            width: 33.3333%;
+            height: 200px;
+            background-color: mistyrose;
+        }
+
+        .direct{
+            width: 33.3333%;
+            height: 200px;
+            background-color: mediumspringgreen;
+        }     
+
+        /* footer */
+        #footer{
+            width: 100%;
+            background-color: #ddd;
+        }
+
+        .footer_inner{
+            width: 1200px;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        .f_logo{
+            width: 200px;
+            height: 100px;
+            background-color: aliceblue;
+        }
+
+        .f_right{
+            width: 1000px;
+        }
+
+        .f_menu{
+            height: 50px;
+            background-color: lightcoral;
+        }
+
+        .copy{
+            height: 50px;
+            background-color: yellow;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="head_inner">
+                <h1 class="logo"></h1>
+                <nav class="nav"></nav>
+            </div>
+            
+        </header>
+
+        <section id="slide"></section>
+
+        <section id="contents">
+            <article class="notice"></article>
+            <article class="banner"></article>
+            <article class="direct"></article>
+        </section>
+
+        <footer id="footer">
+            <div class="footer_inner">
+                <div class="f_logo"></div>
+                <div class="f_right">
+                    <div class="f_menu"></div>
+                    <div class="copy"></div>
+                </div>
+            </div>
+            
+        </footer>
+    </div>
+</body>
+</html>
