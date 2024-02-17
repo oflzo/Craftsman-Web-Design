@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S_2</title>
+    <script src="js/jquery-1.12.3.js"></script>
+    <style type="text/css">
+        *{margin: 0;padding: 0; box-sizing: border-box;}
+        
+        #wrap{
+            width: 100%;
+        }
+
+        /* <!-- header -------------------------------> */
+        #header{
+            width: 1200px;
+            display: flex;
+            margin: 0 auto;
+        }
+
+        #header .logo{
+            width: 200px;
+            height: 100px;
+            background-color: seashell;
+        }
+
+        #header .nav{
+            width: 1000px;
+            height: 100px;
+            background-color: lightpink;
+        }
+
+        /* <!-- contents -----------------------------> */
+        #contents{
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        #contents .slide{
+            width: 1200px;
+            height: 300px;
+            background-color: powderblue;
+            overflow: hidden;
+        }
+
+        .slide_wrap{display: flex;}
+        
+        .slide_wrap .slider{
+            position: relative;
+        }
+        .slide_wrap .slider img{vertical-align: top;}
+
+        .slide_wrap .slider span{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            background-color: #313131;
+            font-size: 25px;
+            font-weight: bold;
+            color: aqua;
+        }
+
+        #contents .content{
+            width: 1200px;
+            /* background-color: lightgreen; */
+            display: flex;
+        }
+
+        .notice{
+            width: 33.3333%;
+            height: 200px;
+            background-color: aliceblue;
+        }
+        .gallery{
+            width: 33.3333%;
+            height: 200px;
+            background-color: lavender;
+        }
+        .banner{
+            width: 33.3333%;
+            height: 200px;
+            background-color: lemonchiffon;
+        }
+
+        /* <!-- footer -----------------------------> */
+        #footer{
+            width: 1200px;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        .f_logo{
+            width: 200px;
+            height: 100px;
+            background-color: aqua;
+        }
+        .f_copy{
+            width: 700px;
+            height: 100px;
+            background-color: mediumslateblue;
+        }
+        .f_family{
+            width: 300px;
+            height: 100px;
+            background-color: mediumaquamarine;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <h1 class="logo"></h1>
+            <nav class="nav"></nav>
+        </header>
+        <!-- header ------------------------------->
+
+        <section id="contents">
+            <section class="slide">
+                <div class="slide_wrap">
+                    <div class="slider s1">
+                        <img src="img/s1.jpg" alt="slide1">
+                        <span>이미지1</span>
+                    </div>
+                    <div class="slider s2">
+                        <img src="img/s2.jpg" alt="slide2">
+                        <span>이미지2</span>
+                    </div>
+                    <div class="slider s3">
+                        <img src="img/s3.jpg" alt="slide3">
+                        <span>이미지3</span>
+                    </div>
+                </div>
+            </section>
+            <section class="content">
+                <div class="notice"></div>
+                <div class="gallery"></div>
+                <div class="banner"></div>
+            </section>
+        </section>
+        <!-- contents ----------------------------->
+        <footer id="footer">
+            <div class="f_logo"></div>
+            <div class="f_copy"></div>
+            <div class="f_family"></div>
+        </footer>
+        <!-- footer ----------------------------->
+    </div><!-- wrap -->
+
+    <script lang="java">
+        $(function(){
+            let currentIndex=0;
+            $(".slide_wrap").append($(".slider").first().clone(true));
+
+            setInterval(function(){
+                currentIndex++;
+                $(".slide_wrap").animate({marginLeft:-currentIndex * 100 +"%"},600);
+
+                if(currentIndex==3){
+                    setTimeout(function(){
+                        $(".slide_wrap").animate({marginLeft:0},0);
+                        currentIndex=0;
+                    },700)
+                }
+            },3000)
+        })
+    </script>
+</body>
+</html>
