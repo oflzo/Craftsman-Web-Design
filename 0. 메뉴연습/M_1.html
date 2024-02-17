@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디자인기능사 메뉴 M-1(A_3유형,B_3유형)</title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <style type="text/css">
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        a{text-decoration: none; color: inherit;}
+
+        ul,li{list-style: none;}
+        body{
+            background-color: #fff;
+            color: #333;
+        }
+
+        #wrap{
+            width: 100%;
+        }
+
+        /* header */
+        #header{
+            width: 1200px;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        .logo{
+            width: 200px;
+            height: 100px;
+            background-color: #eee;
+        }
+
+        .nav{
+            width: 1000px;
+            height: 100px;
+            background-color: aliceblue;
+        }
+
+        /* main&sub_meun */
+        .main_menu{
+            display: flex;
+            justify-content:right;
+            margin-top: 30px;
+            
+        }
+        
+        .main_menu >li{
+            position: relative;
+        }
+        .main_menu >li >a{
+            display: block;
+            padding: 10px 50px;
+            background-color: paleturquoise;
+            
+        }
+        .main_menu >li:hover >a{
+            background-color: palevioletred;
+        }
+
+        .sub {
+            position: absolute ;
+            left: 0;
+            top: 40px;
+            width: 100%;
+            text-align: center;
+            display: none;
+        }
+        /* .sub li{} */
+        .sub li a{
+            display: block;
+            padding: 10px;
+            width: 100%;
+            background-color: lightskyblue;
+
+        }
+        .sub li a:hover{
+            background-color: lightpink;
+        }
+
+
+        /* slide */
+        #slide{
+            width: 1200px;
+            height: 300px;
+            margin: 0 auto;
+            background-color: palegoldenrod;
+        }
+
+        /* contents */
+        #contents{
+            width: 1200px;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        .notice{
+            width: 33.3333%;
+            height: 200px;
+            background-color: mediumspringgreen;
+        }
+        .banner{
+            width: 33.3333%;
+            height: 200px;
+            background-color: mediumorchid;
+        }
+        .direct{
+            width: 33.3333%;
+            height: 200px;
+            background-color: mediumturquoise;
+        }
+
+        /* footer */
+        #footer{
+            width: 1200px;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        .f_logo{
+            flex: 2;
+            background-color: plum;
+            /* height: 100px; */
+        }
+        .f_right{
+            flex: 8;
+            /* flex-direction: column; */
+        }
+
+        .f_menu{
+            height: 50px;
+            border-bottom: 1px dotted red;
+            background-color: palegoldenrod;
+        }
+
+        .f_copy{
+            height: 50px;
+            background-color: powderblue;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <h1 class="logo"></h1>
+            <nav class="nav">
+                <ul class="main_menu">
+                    <li>
+                        <a href="#">메뉴1</a>
+                        <ul class="sub">
+                            <li><a href="#">서브메뉴1-1</a></li>
+                            <li><a href="#">서브메뉴1-2</a></li>
+                            <li><a href="#">서브메뉴1-3</a></li>
+                            <li><a href="#">서브메뉴1-4</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">메뉴2</a>
+                        <ul class="sub">
+                            <li><a href="#">서브메뉴2-1</a></li>
+                            <li><a href="#">서브메뉴2-2</a></li>
+                            <li><a href="#">서브메뉴2-3</a></li>
+                            <li><a href="#">서브메뉴2-4</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">메뉴3</a>
+                        <ul class="sub">
+                            <li><a href="#">서브메뉴3-1</a></li>
+                            <li><a href="#">서브메뉴3-2</a></li>
+                            <li><a href="#">서브메뉴3-3</a></li>
+                            <li><a href="#">서브메뉴3-4</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">메뉴4</a>
+                        <ul class="sub">
+                            <li><a href="#">서브메뉴4-1</a></li>
+                            <li><a href="#">서브메뉴4-2</a></li>
+                            <li><a href="#">서브메뉴4-3</a></li>
+                            <li><a href="#">서브메뉴4-4</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!-- header -->
+
+        <section id="slide"></section>
+        <!-- slide -->
+
+        <section id="contents"> 
+            <article class="notice"></article>
+            <article class="banner"></article>
+            <article class="direct"></article>
+        </section>
+
+        <!-- contents -->
+
+        <footer id="footer">
+            <article class="f_logo"></article>
+            <article class="f_right">
+                <div class="f_menu"></div>
+                <div class="f_copy"></div>
+            </article>
+        </footer>
+        <!-- footer -->
+    </div>
+
+    <script lang="java">
+        $(function(){
+            //메뉴
+
+            // $(".main_menu>li").mouseover(function(){
+            //     $(this).children(".sub").stop().slideDown();
+            // })
+            // $(".main_menu>li").mouseout(function(){
+            //     $(".sub").stop().slideUp();
+            // })
+
+            //메뉴
+            
+            $(".main_menu>li").mouseover(function(){
+                $(this).find(".sub").stop().slideDown();
+            })
+            $(".main_menu>li").mouseout(function(){
+                $(this).find(".sub").stop().slideUp();
+            })
+
+        })//jQuery
+    </script>
+</body>
+</html>

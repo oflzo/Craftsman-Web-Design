@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+*{margin: 0; padding: 0; box-sizing: border-box;}
+ul,li,ol{list-style: none;}
+a{text-decoration: none; color: inherit; }
+img{vertical-align: top;max-width: 100%;}
+table{border-collapse: collapse;}
+button{cursor: pointer;}
+
+html,body{
+    background-color: #fff;
+    color: #333;
+}
+
+#wrap{width: 100%;}
+
+#header{
+    width: 1200px;
+    margin: 0 auto;
+    /* height: 100px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo a{
+    width: 200px;
+    height: 100px;
+    display: block;
+    /* border: 1px solid red; */
+    background-color: #eee;
+    background-image: url("../img/로고.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+
+.nav{
+    width: 1000px;
+    height: 100px;
+    background-color: lemonchiffon;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.main_menu{
+    /* width: 800px; */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid blue; */
+    margin-right: 20px;
+}
+
+/* .main_menu > li{margin-right: 10px;} */
+.main_menu > li > a{
+    display: block;
+    font-size: 15px;
+    background-color: darkorange;
+    color: lavender;
+    width: 100px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-weight: 500;
+}
+    
+.main_menu > li:hover > a{
+    background-color: rgb(240, 204, 139);
+    color: gray;
+}
+
+.sub_menu{display: none;}
+.sub_menu li{}
+.sub_menu li a{
+    display: block;
+}
+.sub_menu li a:hover{}
+
+#slider{
+    width: 1200px;
+    margin: 0 auto;
+    height: 300px;
+    background-color: pink;
+}
+
+#contents{
+    width: 1200px;
+    /* height: 200px; */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.notice{
+    height: 200px;
+    background-color: #ddd;
+}
+.banner{
+    height: 200px;
+    background-color: #eee;
+}
+.direct{
+    height: 200px;
+    background-color: #b3b3b3;
+}
+
+#footer{
+    width: 1200px;
+    margin: 0 auto;
+    height: 100px;
+}
